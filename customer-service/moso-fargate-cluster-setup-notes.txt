@@ -1,0 +1,81 @@
+https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html
+
+$ aws sts get-caller-identity
+
+/* Creting a VPC stack to be used by the cluster */
+$ aws cloudformation create-stack \
+  --region us-east-1 \
+  --stack-name moso-eks-vpc-stack \
+  --template-url https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
+
+/* Create a trust policy in a file called eks-cluster-role-trust-policy.json, which will be assigned to the EKS cluster role */
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "eks.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+
+
+$ aws iam create-role \
+  --role-name MosoEKSClusterRole \
+  --assume-role-policy-document file://"eks-cluster-role-trust-policy.json"
+
+/* Also attache the following management policy --> AmazonEKSClusterPolicy */
+aws iam attach-role-policy \
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy \
+  --role-name MosoEKSClusterRole
+
+
+/* Update your computer to communicate with the manually created cluster moso-cluster */
+
+$ aws eks update-kubeconfig --region us-east-1 --name moso-cluster
+
+
+/* Create a POD execution role with the following pod-execution-role-trust-policy.json */
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Condition": {
+         "ArnLike": {
+            "aws:SourceArn": "arn:aws:eks:region-code:111122223333:fargateprofile/my-cluster/*"
+         }
+      },
+      "Principal": {
+        "Service": "eks-fargate-pods.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+$ aws iam create-role \
+  --role-name AmazonEKSFargatePodExecutionRole \
+  --assume-role-policy-document file://"pod-execution-role-trust-policy.json"
+
+
+$ aws iam attach-role-policy \
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy \
+  --role-name AmazonEKSFargatePodExecutionRole
+
+
+Open the Amazon EKS console at https://console.aws.amazon.com/eks/home#/clusters
+
+Create Namespace --> kubectl create namespace moso-dev
+Configure Fargate profile
+
+aws eks create-fargate-profile \
+    --fargate-profile-name moso-profile \
+    --cluster-name moso-cluster \
+    --pod-execution-role-arn arn:aws:iam::710082705513:role/AmazonEKSFargatePodExecutionRole \
+    --selectors namespace=moso-dev,labels={app=customer-service} \
+    --subnets subnet-00c5ba90276ab989a subnet-098b7b1296d566ebf subnet-0646b8e6b853a3088
