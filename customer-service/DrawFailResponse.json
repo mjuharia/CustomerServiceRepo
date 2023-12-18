@@ -1,0 +1,17 @@
+{
+    "builtDrawID": 61706346,
+    "dtDrawID": 61706,
+    "drawNumber": 0,
+    "dtDealID": 60000952,
+    "success": false,
+    "errorList": [
+        {
+            "errorCode": "DT-001",
+            "errorDescription": "Duplicate Draw number {0} for Deal {60000952}."
+        },
+        {
+            "errorCode": "DT-002",
+            "errorDescription": "Facility Id {91535} does not exist."
+        }
+    ]
+}

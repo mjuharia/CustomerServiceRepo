@@ -1,0 +1,52 @@
+{
+    "builtDrawID": 61706346,
+    "drawNumber": 1,
+    "dtDealID": 60000952,
+    "dtDealName": "Logan Fountain",
+    "documentList": [
+        {
+            "name": "Logan Fountain - Draw 1 - AIA G702 & G703",
+            "documentClassification": "Backup - Hard Costs",
+            "documentSubClassification": "AIA G702 & G703",
+            "uploadedOn": "2023-11-15",
+            "modifiedBy": "Joe Smith",
+            "modifiedOn": "2023-11-15",
+            "builtDocKey": "64c389dda4bf8984d34ccf751d000145",
+            "builtDocVersion": "RZrApvkVHPq5pV4L9LRMh5sP3G2z4Z0v",
+            "documentObjectURL": "https://ccc.s3.amazonaws.com/input/AIAG702703.xlsx"
+        },
+        {
+            "name": "Logan Fountain - Draw 1 - Lien Waivers",
+            "documentClassification": "Lien Waiver",
+            "documentSubClassification": "Lien Waivers",
+            "uploadedOn": "2023-11-15",
+            "modifiedBy": "Joe Smith",
+            "modifiedOn": "2023-11-15",
+            "builtDocKey": "64c456dda4bf8984d34ccf751d003375",
+            "builtDocVersion": "RZrApvkVHPq5pV4LLMMOPh5sP3G2z4Z0v",
+            "documentObjectURL": "https://ccc.s3.amazonaws.com/input/LienWaivers.xlsx"
+        },
+        {
+            "name": "Logan Fountain - Draw 1 - SOR",
+            "documentClassification": "SOR",
+            "documentSubClassification": "Site Observation Report (pdf)",
+            "uploadedOn": "2023-11-15",
+            "modifiedBy": "Joe Smith",
+            "modifiedOn": "2023-11-15",
+            "builtDocKey": "64c456dda4bf8984d34ccf751d003376",
+            "builtDocVersion": "RZrApvkVHUq5pV4LLMMOPh5sP3G2z7Z0v",
+            "documentObjectURL": "https://ccc.s3.amazonaws.com/input/SOR.pdf"
+        },
+        {
+            "name": "Logan Fountain - Draw 1 - Soft Cost Invoices",
+            "documentClassification": "Backup - Soft Costs",
+            "documentSubClassification": "Soft Cost Invoices",
+            "uploadedOn": "2023-11-15",
+            "modifiedBy": "Joe Smith",
+            "modifiedOn": "2023-11-15",
+            "builtDocKey": "95c456dda4bf8984d34ccf751d003376",
+            "builtDocVersion": "RZrApvkVHUq7pV4LLXXOPh5sP3G2z9Z0v",
+            "documentObjectURL": "https://ccc.s3.amazonaws.com/input/SoftCostInvoices.pdf"
+        }
+    ]
+}

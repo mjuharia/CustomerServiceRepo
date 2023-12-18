@@ -19,10 +19,10 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 20Gi
+    storage: 10Gi
   accessModes:
-    #- ReadWriteMany
-    - ReadOnlyMany
+    - ReadWriteMany
+    #- ReadOnlyMany
   hostPath:
     path: "/mnt/data"
 ---
@@ -31,13 +31,16 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysql-pv-claim
 spec:
-  storageClassName: manual
+  storageClassName: standard
   accessModes:
-    #- ReadWriteMany
-    - ReadOnlyMany
+    - ReadWriteMany
+    #- ReadOnlyMany
+  gcePersistentDisk:
+    pdName: pg-data-disk
+    fsType: ext4
   resources:
     requests:
-      storage: 20Gi
+      storage: 10Gi
 
 ---
 
@@ -114,4 +117,4 @@ spec:
     app: mysqldb
   sessionAffinity: None
   # Possible types are : ClusterIP, NodePort, LoadBalancer, and Ingress 
-  type: LoadBalancer
+  type: ClusterIP

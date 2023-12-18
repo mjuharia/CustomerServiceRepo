@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: mmv3-customer-service
-    image: mjuharia76/mmv3-customer-service:0.0.4-SNAPSHOT
+    image: mjuharia76/mmv3-customer-service:0.0.6-SNAPSHOT
 #    resources:
 #      requests:
 #        memory: "4Gi"
@@ -44,7 +44,7 @@ spec:
         app: customer-service
     spec:
       containers:
-      - image: mjuharia76/mmv3-customer-service:0.0.4-SNAPSHOT
+      - image: mjuharia76/mmv3-customer-service:0.0.6-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: mmv3-customer-service
         readinessProbe:

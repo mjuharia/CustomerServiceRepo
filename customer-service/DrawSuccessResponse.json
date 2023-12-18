@@ -1,0 +1,57 @@
+{
+    "builtDrawID": 61706346,
+    "dtDrawID": 61706,
+    "drawNumber": 1,
+    "dtDealID": 60000952,
+    "success": true,
+    "fundingSources": [
+        {
+            "builtSourceID": 3,
+            "dtDrawFundingID": 0,
+            "facilityID": 51509,
+            "commitmentID": "001DFLT432670003",
+            "loanID": "001HFIL432670001",
+            "sourceDescription": "Citi Construction Loan (Series A Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 2000000,
+            "amountNotBorrowed": 16000000
+        },
+        {
+            "builtSourceID": 4,
+            "dtDrawFundingID": 0,
+            "facilityID": 51533,
+            "commitmentID": "001DFLT432670004",
+            "loanID": "001HFIL432670002",
+            "sourceDescription": "Citi Construction Loan (Series B Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 2000000,
+            "amountNotBorrowed": 16000000
+        },
+        {
+            "builtSourceID": 5,
+            "dtDrawFundingID": 0,
+            "facilityID": 51534,
+            "commitmentID": "001DFLT432670005",
+            "loanID": "001HFIL432670003",
+            "sourceDescription": "Citi Construction Loan (Series C Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 1000000,
+            "amountNotBorrowed": 18000000
+        },
+        {
+            "builtSourceID": 6,
+            "dtDrawFundingID": 0,
+            "facilityID": 51535,
+            "commitmentID": null,
+            "loanID": null,
+            "sourceDescription": "TC Equity",
+            "isCommitmentActive": false,
+            "isLoanActive": false,
+            "outstandingPplBal": 5000000,
+            "amountNotBorrowed": 10000000
+        }
+    ]
+}

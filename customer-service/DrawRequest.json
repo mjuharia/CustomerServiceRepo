@@ -1,0 +1,73 @@
+{
+    "builtDrawId": 61706346,
+    "builtDrawStatus": "APPROVED",
+    "drawNumber": 1,
+    "dtDealID": 60000952,
+    "dealName": "Logan Fountain",
+    "drawDate": "2023-12-06",
+    "requestRecievedDate": "2023-11-29",
+    "sorReceivedDate": "2023-11-25",
+    "advanceAmount": 10000000,
+    "isHardCost": true,
+    "isTitleRequired": true,
+    "budgetUtilizationPercentage": 1,
+    "wFType": "SERVICING",
+    "createdBy": "Joe Smith",
+    "createdOn": "2023-11-29",
+    "modifiedBy": "Joe Smith",
+    "modifiedOn": "2023-11-29",
+    "fundingSources": [
+        {
+            "builtSourceID": 3,
+            "facilityID": 51509,
+            "commitmentID": "001DFLT432670003",
+            "loanID": "001HFIL432670001",
+            "sourceDescription": "Citi Construction Loan (Series A Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 2000000,
+            "amountNotBorrowed": 18000000,
+            "fundingAmount": 2000000,
+            "capiAmount": 0
+        },
+        {
+            "builtSourceID": 4,
+            "facilityID": 51533,
+            "commitmentID": "001DFLT432670004",
+            "loanID": "001HFIL432670002",
+            "sourceDescription": "Citi Construction Loan (Series B Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 2000000,
+            "amountNotBorrowed": 18000000,
+            "fundingAmount": 2000000,
+            "capiAmount": 0
+        },
+        {
+            "builtSourceID": 5,
+            "facilityID": 51534,
+            "commitmentID": "001DFLT432670005",
+            "loanID": "001HFIL432670003",
+            "sourceDescription": "Citi Construction Loan (Series C Note)",
+            "isCommitmentActive": true,
+            "isLoanActive": true,
+            "outstandingPplBal": 1000000,
+            "amountNotBorrowed": 19000000,
+            "fundingAmount": 1000000,
+            "capiAmount": 0
+        },
+        {
+            "builtSourceID": 6,
+            "facilityID": 51535,
+            "commitmentID": null,
+            "loanID": null,
+            "sourceDescription": "TC Equity",
+            "isCommitmentActive": false,
+            "isLoanActive": false,
+            "outstandingPplBal": 5000000,
+            "amountNotBorrowed": 15000000,
+            "fundingAmount": 5000000,
+            "capiAmount": 0
+        }
+    ]
+}
