@@ -18,7 +18,7 @@ metadata:
 spec:
   containers:
   - name: mmv3-kafka-consumer
-    image: mjuharia76/mmv3-kafka-consumer:0.0.3-SNAPSHOT
+    image: mjuharia76/mmv3-kafka-consumer:1.0.4-SNAPSHOT
 #    resources:
 #      requests:
 #        memory: "4Gi"
@@ -54,7 +54,7 @@ spec:
         app: kafka-consumer
     spec:
       containers:
-      - image: mjuharia76/mmv3-kafka-consumer:0.0.3-SNAPSHOT
+      - image: mjuharia76/mmv3-kafka-consumer:1.0.4-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: mmv3-kafka-consumer
         envFrom:

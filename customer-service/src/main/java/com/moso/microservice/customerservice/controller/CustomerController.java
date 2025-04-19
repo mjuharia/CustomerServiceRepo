@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import com.moso.microservice.customerservice.jpa.CustomerRepository;
 
 import jakarta.validation.Valid;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class CustomerController {
 	
@@ -33,6 +35,7 @@ public class CustomerController {
 	@Autowired
 	CustomerContactRepository contactRepo;
 	
+	//@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@GetMapping("/customers")
 	public List<Customer> findAllCustomers(){
 		return custRepo.findAll();

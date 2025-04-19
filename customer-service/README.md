@@ -54,7 +54,7 @@ kompose convert -f docker-compose.yaml
 gcloud components install gke-gcloud-auth-plugin
 glcoud auth login
 
-// Connect to the Kubernetes cluster
+// Connect to the Kubernetes cluster - https://console.cloud.google.com/ use evegar google credentials.
 gcloud container clusters get-credentials moso-cluster --region us-east1 --project alert-inquiry-403617
 gcloud container clusters get-credentials moso-cluster --region us-central1 --project alert-inquiry-403617
 
@@ -234,7 +234,7 @@ kubectl delete namespace moso-dev
 
 ```
 Using Kafaka on cloud. Using upstash at following URL:
-https://upstash.com/
+https://upstash.com/ use evgar google credentials
 
 #Install Ubuntu on Windows
 wsl --install

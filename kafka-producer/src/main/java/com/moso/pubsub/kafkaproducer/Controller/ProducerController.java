@@ -42,6 +42,16 @@ public class ProducerController {
 		// Create Producer Properties
 		Properties properties = new Properties();
 		//properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
+		
+		
+		properties.setProperty("bootstrap.servers", "https://mutual-mastodon-14072-us1-kafka.upstash.io:9092");
+		properties.setProperty("sasl.mechanism", "SCRAM-SHA-256");
+		properties.setProperty("security.protocol", "SASL_SSL");
+		properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"bXV0dWFsLW1hc3RvZG9uLTE0MDcyJMOh4Q99ZoJ_anqZsRCTdM5HTDze1UQm1Hc\" password=\"MGEyMGQxNTctOTA0ZS00N2QxLWFjNDctYmEyOTY2YzdlZTBm\";");
+		properties.setProperty("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+		properties.setProperty("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+		
+		/*
 		properties.setProperty("bootstrap.servers", "cheerful-tomcat-14938-us1-kafka.upstash.io:9092");
 		properties.setProperty("sasl.mechanism", "SCRAM-SHA-256");
 		properties.setProperty("security.protocol", "SASL_SSL");
@@ -49,7 +59,7 @@ public class ProducerController {
 		
 		properties.setProperty("key.serializer", StringSerializer.class.getName());
 		properties.setProperty("value.serializer", StringSerializer.class.getName());
-		
+		*/
 		// Create the Producer
 		KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 		try {

@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.moso.pubsub</groupId>
 	<artifactId>kafka-consumer</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>kafka-consumer</name>
 	<description>Kafka consumer microservice</description>
 	<properties>
