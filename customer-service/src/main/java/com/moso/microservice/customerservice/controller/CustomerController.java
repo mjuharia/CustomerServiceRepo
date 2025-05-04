@@ -25,7 +25,7 @@ import com.moso.microservice.customerservice.jpa.CustomerRepository;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class CustomerController {
 	
@@ -35,7 +35,7 @@ public class CustomerController {
 	@Autowired
 	CustomerContactRepository contactRepo;
 	
-	//@CrossOrigin(origins = "*", allowedHeaders = "*")
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/customers")
 	public List<Customer> findAllCustomers(){
 		return custRepo.findAll();
